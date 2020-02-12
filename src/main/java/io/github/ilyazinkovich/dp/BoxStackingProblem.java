@@ -24,6 +24,9 @@ public class BoxStackingProblem {
         return maxHeight;
     }
 
+    /**
+     * maxHeight(i) = max{height(i) + maxHeight(j), j < i, width(i) < width(bottom(i)), depth(i) < depth(bottom(i))}
+     */
     private static void findMaxHeights(int count, Option[] options, int[] maxHeights, int[] bottoms) {
         for (int i = 0; i < count; i++) {
             maxHeights[i] = options[i].height;
