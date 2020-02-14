@@ -1,5 +1,7 @@
 package io.github.ilyazinkovich.dp;
 
+import org.junit.Test;
+
 import static java.util.Arrays.sort;
 import static java.util.Comparator.comparingInt;
 import static org.junit.Assert.assertEquals;
@@ -72,10 +74,6 @@ public class BoxStackingProblem {
         }
     }
 
-    public static void main(String[] args) {
-        assertEquals(60, solve(4, new int[]{4, 1, 4, 10}, new int[]{6, 2, 5, 12}, new int[]{7, 3, 6, 32}));
-    }
-
     private static class Option {
         public final int height;
         public final int width;
@@ -91,5 +89,10 @@ public class BoxStackingProblem {
         public String toString() {
             return height + "x" + width + "x" + depth;
         }
+    }
+
+    @Test
+    public void test() {
+        assertEquals(60, solve(4, new int[]{4, 1, 4, 10}, new int[]{6, 2, 5, 12}, new int[]{7, 3, 6, 32}));
     }
 }

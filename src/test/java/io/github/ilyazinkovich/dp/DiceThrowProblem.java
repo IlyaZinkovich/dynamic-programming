@@ -1,5 +1,7 @@
 package io.github.ilyazinkovich.dp;
 
+import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 public class DiceThrowProblem {
@@ -23,7 +25,8 @@ public class DiceThrowProblem {
         return combinations[dices][sum];
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         assertEquals(0, solve(4, 2, 1));
         assertEquals(2, solve(2, 2, 3));
         assertEquals(21, solve(6, 3, 8));
