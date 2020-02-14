@@ -1,5 +1,7 @@
 package io.github.ilyazinkovich.dp;
 
+import static org.junit.Assert.assertEquals;
+
 public class EggDroppingPuzzle {
 
     /**
@@ -30,6 +32,6 @@ public class EggDroppingPuzzle {
     }
 
     public static void main(String[] args) {
-        assert solve(2, 36) == 8;
+        assertEquals(8, solve(2, 36));
     }
 }

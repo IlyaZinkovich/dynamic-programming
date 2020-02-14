@@ -2,6 +2,7 @@ package io.github.ilyazinkovich.dp;
 
 import static java.util.Arrays.sort;
 import static java.util.Comparator.comparingInt;
+import static org.junit.Assert.assertEquals;
 
 public class BoxStackingProblem {
 
@@ -72,7 +73,7 @@ public class BoxStackingProblem {
     }
 
     public static void main(String[] args) {
-        assert solve(4, new int[]{4, 1, 4, 10}, new int[]{6, 2, 5, 12}, new int[]{7, 3, 6, 32}) == 60;
+        assertEquals(60, solve(4, new int[]{4, 1, 4, 10}, new int[]{6, 2, 5, 12}, new int[]{7, 3, 6, 32}));
     }
 
     private static class Option {
